@@ -1,0 +1,35 @@
+@import './styles.css';
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+}
+
+* {
+  box-sizing: border-box;
+}
+.footer-menu {
+  /* position: fixed; */
+  width: 100%;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #d7d7d7;
+  background-color: #202020;
+}
+.footer-menu span {
+  padding: 20px;
+}
+.detailed-ellipsis {
+  display: flex;
+  font-size: 42px;
+  justify-content: center;
+  color: #d6d6d6;
+}

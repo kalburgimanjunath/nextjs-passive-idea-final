@@ -20,7 +20,7 @@ export default function JobListing({ jobs, search, setSearch }) {
   return (
     <div>
       <h3>Latest jobs</h3>
-      <Filters search={search} setSearch={setSearch} />
+      <Filters search={search} />
       {jobs &&
         jobs.map((item) => {
           return (

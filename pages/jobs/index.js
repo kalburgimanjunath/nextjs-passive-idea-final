@@ -22,7 +22,7 @@ export default function index() {
   });
   return (
     <div>
-      <JobListing jobs={jobs} search={search} setSearch={setSearch} />
+      <JobListing jobs={jobs} search={search} />
     </div>
   );
 }

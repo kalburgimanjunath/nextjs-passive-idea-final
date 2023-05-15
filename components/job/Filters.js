@@ -8,7 +8,6 @@ export default function Filters({ search, setSearch }) {
           className="searchbox"
           placeholder="search by job title/description/keywords/company"
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
         />
       </div>
     );

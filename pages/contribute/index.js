@@ -4,14 +4,14 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 // import { Editable, withReact, useSlate, Slate } from 'slate-react';
 // import { BaseEditor, Descendant } from 'slate';
 // import { ReactEditor } from 'slate-react';
-import {
-  Editor,
-  Transforms,
-  createEditor,
-  Element as SlateElement,
-} from 'slate';
+// import {
+//   Editor,
+//   Transforms,
+//   createEditor,
+//   Element as SlateElement,
+// } from 'slate';
 export default function index() {
-  const [posts, setPosts] = useState();
+  const [posts, setPosts] = useState([]);
   // const [editor] = useState(() => withReact(createEditor()));
   // const initialValue = [
   //   {
@@ -24,7 +24,7 @@ export default function index() {
       'https://api.airtable.com/v0/appkjlwWrVqVpSC7i/allposts?api_key=keyeNXyxxuuYJY19w'
     )
       .then((res) => res.json())
-      .then((result) => console.log(result));
+      .then((result) => setPosts(result));
   };
   const saveData = (data) => {
     const url = `https://api.airtable.com/v0/appkjlwWrVqVpSC7i/allposts`;
@@ -47,6 +47,14 @@ export default function index() {
   useEffect(() => {
     fetchRecords();
   });
+  const Posts = ({ items }) => {
+    return (
+      items &&
+      items.map((item) => {
+        return <div>{item.fields.title}</div>;
+      })
+    );
+  };
   return (
     <div>
       <header>
@@ -175,6 +183,10 @@ export default function index() {
             </Form>
           )}
         </Formik>
+      </div>
+      <div>
+        <h5>Latest Posts</h5>
+        {posts ? <Posts items={posts.records} /> : null}
       </div>
     </div>
   );

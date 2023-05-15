@@ -1,4 +1,4 @@
-import { Input } from '../../components/';
+import { Input, Loading } from '../../components/';
 import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 // import { Editable, withReact, useSlate, Slate } from 'slate-react';
@@ -186,7 +186,7 @@ export default function index() {
       </div>
       <div>
         <h5>Latest Posts</h5>
-        {posts ? <Posts items={posts.records} /> : null}
+        {posts ? <Posts items={posts.records} /> : <Loading />}
       </div>
     </div>
   );

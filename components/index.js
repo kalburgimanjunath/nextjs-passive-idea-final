@@ -6,6 +6,7 @@ import Posts from './posts';
 import JobListing from './job/JobListing';
 import { Input, Selectbox, Checkbox } from './formcontrols/';
 import Footerbutton from './social/footerbutton';
+import Loading from './shared/Loading';
 export {
   Header,
   Footer,
@@ -17,4 +18,5 @@ export {
   Checkbox,
   JobListing,
   Footerbutton,
+  Loading,
 };

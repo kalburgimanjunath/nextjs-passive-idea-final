@@ -1,5 +1,6 @@
 import { Input, Loading } from '../../components/';
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 // import { Editable, withReact, useSlate, Slate } from 'slate-react';
 // import { BaseEditor, Descendant } from 'slate';
@@ -51,7 +52,23 @@ export default function index() {
     return (
       items &&
       items.map((item) => {
-        return <div>{item.fields.title}</div>;
+        return (
+          <div className="lists-item post">
+            <div>
+              <img
+                src="https://picsum.photos/seed/picsum/200/300"
+                width={200}
+                height={200}
+              />
+            </div>
+            <h4>{item.fields.title}</h4>
+            <div>
+              {item.fields.description.length > 256
+                ? item.fields.description.substring(1, 256) + '...more'
+                : item.fields.description}
+            </div>
+          </div>
+        );
       })
     );
   };

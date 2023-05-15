@@ -47,13 +47,13 @@ export default function index() {
   };
   useEffect(() => {
     fetchRecords();
-  });
+  }, [posts]);
   const Posts = ({ items }) => {
     return (
       items &&
       items.map((item) => {
         return (
-          <div className="lists-item post">
+          <div className="lists-item post list-item-style">
             <div>
               <img
                 src="https://picsum.photos/seed/picsum/200/300"

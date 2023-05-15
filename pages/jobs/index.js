@@ -2,6 +2,8 @@ import { Input, JobListing } from '../../components/';
 import React, { useEffect, useState } from 'react';
 export default function index() {
   const [jobs, setJobs] = useState([]);
+  const [search, setSearch] = useState('');
+
   const fetchJobs = async () => {
     const results = await fetch('/api/jobs')
       .then((res) => res.json())
@@ -20,7 +22,7 @@ export default function index() {
   });
   return (
     <div>
-      <JobListing jobs={jobs} />
+      <JobListing jobs={jobs} search={search} setSearch={setSearch} />
     </div>
   );
 }

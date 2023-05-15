@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-export default function JobListing({ jobs }) {
+import Filters from './Filters';
+export default function JobListing({ jobs, search, setSearch }) {
   const JobsTemplate = ({ item }) => {
     return (
       <>
@@ -19,6 +20,7 @@ export default function JobListing({ jobs }) {
   return (
     <div>
       <h3>Latest jobs</h3>
+      <Filters search={search} setSearch={setSearch} />
       {jobs &&
         jobs.map((item) => {
           return (

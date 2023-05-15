@@ -1,6 +1,7 @@
 @import 'sidebar.module.css';
 @import 'navbar.module.css';
 @import 'post.module.css';
+@import 'search.module.css';
 .rightpane {
   padding: 20px;
 }

@@ -1,8 +1,24 @@
 import { Input } from '../../components/';
 import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+// import { Editable, withReact, useSlate, Slate } from 'slate-react';
+// import { BaseEditor, Descendant } from 'slate';
+// import { ReactEditor } from 'slate-react';
+import {
+  Editor,
+  Transforms,
+  createEditor,
+  Element as SlateElement,
+} from 'slate';
 export default function index() {
   const [posts, setPosts] = useState();
+  // const [editor] = useState(() => withReact(createEditor()));
+  // const initialValue = [
+  //   {
+  //     type: 'paragraph',
+  //     children: [{ text: 'A line of text in a paragraph.' }],
+  //   },
+  // ];
   const fetchRecords = () => {
     fetch(
       'https://api.airtable.com/v0/appkjlwWrVqVpSC7i/allposts?api_key=keyeNXyxxuuYJY19w'
@@ -79,46 +95,72 @@ export default function index() {
             isSubmitting,
           }) => (
             <Form className="mx-auto">
-              <Field
-                type="text"
-                name="title"
-                value={values.title}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                placeholder="title"
-              />
-              <ErrorMessage name="title" component="div" />
-
-              <Field
-                type="text"
-                name="description"
-                value={values.description}
-                placeholder="description"
-              />
-              <ErrorMessage name="description" component="div" />
-
-              <Field
-                type="text"
-                name="content"
-                value={values.content}
-                placeholder="content"
-              />
-              <ErrorMessage name="content" component="div" />
-              <Field
-                type="text"
-                name="tags"
-                value="tags"
-                value={values.tags}
-                placeholder="tags"
-              />
-              <ErrorMessage name="tags" component="div" />
-              <Field
-                type="text"
-                name="category"
-                value={values.category}
-                placeholder="category"
-              />
-              <ErrorMessage name="category" component="div" />
+              <div className="form-group">
+                <Field
+                  className="form-control"
+                  type="text"
+                  name="title"
+                  value={values.title}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  placeholder="title"
+                />
+                <ErrorMessage name="title" component="div" />
+              </div>
+              <div className="form-group">
+                <Field
+                  className="form-control"
+                  type="text"
+                  name="description"
+                  value={values.description}
+                  placeholder="description"
+                />
+                <ErrorMessage name="description" component="div" />
+              </div>
+              <div className="form-group">
+                <Field
+                  className="form-control"
+                  type="text"
+                  name="content"
+                  value={values.content}
+                  placeholder="content"
+                />
+                <ErrorMessage name="content" component="div" />
+              </div>
+              <div className="form-group">
+                <Field
+                  className="form-control"
+                  type="text"
+                  name="tags"
+                  value="tags"
+                  value={values.tags}
+                  placeholder="tags"
+                />
+                <ErrorMessage name="tags" component="div" />
+              </div>
+              <div className="form-group">
+                <Field
+                  className="form-control"
+                  type="text"
+                  name="category"
+                  value={values.category}
+                  placeholder="category"
+                />
+                <ErrorMessage name="category" component="div" />
+              </div>
+              {/* <Slate
+                className="form-control"
+                editor={editor}
+                value={initialValue}
+              >
+                
+                <Editable
+                 
+                  onKeyDown={(event) => {
+                    console.log(event.key);
+                  }}
+                />
+              </Slate> */}
 
               <footer>
                 <button

@@ -47,26 +47,34 @@ export default function index() {
   };
   useEffect(() => {
     fetchRecords();
-  }, [posts]);
+  }, []);
   const Posts = ({ items }) => {
     return (
       items &&
       items.map((item) => {
         return (
           <div className="lists-item post list-item-style">
-            <div>
+            {/* <div>
               <img
                 src="https://picsum.photos/seed/picsum/200/300"
                 width={200}
                 height={200}
               />
-            </div>
+            </div> */}
             <h4>{item.fields.title}</h4>
-            <div>
-              {item.fields.description.length > 256
-                ? item.fields.description.substring(1, 256) + '...more'
-                : item.fields.description}
-            </div>
+
+            <details>
+              <summary>
+                {item.fields.content.length > 256
+                  ? item.fields.content.substring(1, 256) + '...more'
+                  : item.fields.content}
+              </summary>
+              <p>
+                {item.fields.content.length > 256
+                  ? item.fields.content
+                  : item.fields.content}
+              </p>
+            </details>
           </div>
         );
       })

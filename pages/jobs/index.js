@@ -19,7 +19,7 @@ export default function index() {
   };
   useEffect(() => {
     fetchJobs();
-  });
+  }, [search]);
   return (
     <div>
       <JobListing jobs={jobs} search={search} />

@@ -47,7 +47,7 @@ export default function index() {
   };
   useEffect(() => {
     fetchRecords();
-  }, []);
+  }, [posts]);
   const Posts = ({ items }) => {
     return (
       items &&

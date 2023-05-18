@@ -1,5 +1,8 @@
-export default function Filters({ search, setSearch }) {
-  const SearchBox = () => {
+import { React, useState, useEffect } from 'react';
+export default function Filters({ search, onsetSearch }) {
+  // const [searchtxt, setSearch] = useState();
+
+  const SearchBox = ({ searchString, setSearchString }) => {
     return (
       <div>
         <input
@@ -7,14 +10,15 @@ export default function Filters({ search, setSearch }) {
           name="search"
           className="searchbox"
           placeholder="search by job title/description/keywords/company"
-          value={search}
+          value={searchString}
+          onChange={(e) => setSearchString(e.target.value)}
         />
       </div>
     );
   };
   return (
     <div>
-      <SearchBox />
+      <SearchBox searchString={search} setSearchString={onsetSearch} />
     </div>
   );
 }

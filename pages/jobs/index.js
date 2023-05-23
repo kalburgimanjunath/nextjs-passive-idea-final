@@ -1,5 +1,7 @@
 import { Input, JobListing } from '../../components/';
 import React, { useEffect, useState } from 'react';
+import JobMenu from './shared/JobMenu';
+import JobCategories from './shared/JobCategories';
 export default function index() {
   const [jobs, setJobs] = useState([]);
   const [search, setSearch] = useState('');
@@ -22,6 +24,8 @@ export default function index() {
   }, [search]);
   return (
     <div>
+      <JobMenu />
+      <JobCategories />
       <JobListing jobs={jobs} search={search} />
     </div>
   );

@@ -14,28 +14,44 @@ export default function Navbar({ session }) {
       <div className="navbar-end">
         <ul>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/">
+              <i class="bi bi-house"></i>Home
+            </Link>
           </li>
           <li>
-            <Link href="/jobs">jobs</Link>
+            <Link href="/jobs">
+              <i class="bi bi-person-workspace"></i>jobs
+            </Link>
           </li>
           <li>
-            <Link href="/ideas">Popular Ideas</Link>
+            <Link href="/ideas">
+              <i class="bi bi-bag-heart"></i>Popular Ideas
+            </Link>
           </li>
           <li>
-            <Link href="/contribute">Contribute your Ideas</Link>
+            <Link href="/contribute">
+              <i class="bi bi-balloon-heart"></i>Contribute your Ideas
+            </Link>
           </li>
           <li>
-            <Link href="/profile/edit-profile">Edit Profile</Link>
+            <Link href="/profile/edit-profile">
+              <i class="bi bi-pencil-square"></i>Edit Profile
+            </Link>
           </li>
           <li>
-            <Link href="/public-profile/">Profile</Link>
+            <Link href="/public-profile/">
+              <i class="bi bi-person-bounding-box"></i>Profile
+            </Link>
           </li>
           <li>
-            <Link href="/bookmarks">Bookmarks</Link>
+            <Link href="/bookmarks">
+              <i class="bi bi-bookmark"></i>Bookmarks
+            </Link>
           </li>
           <li>
-            <Link href="/login">Login</Link>
+            <Link href="/login">
+              <i class="bi bi-person-fill-lock"></i>Login
+            </Link>
           </li>
         </ul>
       </div>

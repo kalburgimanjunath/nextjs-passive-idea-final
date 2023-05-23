@@ -13,12 +13,22 @@ export default function Sidebar() {
     fetchCategories();
   }, []);
   return (
-    <div className="lists">
+    <div className="lists" style={{ minWidth: '25%' }}>
       {categories &&
         categories.map((item, index) => {
           return (
             <div className="lists-item" key={index}>
-              <Link href={`../category/${item}`}>{item}</Link>
+              <Link
+                href={`../category/${item}`}
+                style={{
+                  textTransform: 'capitalize',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <span>{item}</span>
+                <i class="bi bi-arrow-right-short"></i>
+              </Link>
             </div>
           );
         })}

@@ -26,7 +26,7 @@ export default function index() {
   }, [id]);
   return (
     <div>
-      {id}
+      <h3 style={{ padding: '5px 0px 20px 0px' }}>{id}</h3>
       <div>
         {banners && (
           <Image
@@ -37,7 +37,7 @@ export default function index() {
             style={{ width: '100%' }}
           />
         )}
-        <h6>PUBLICATIONS</h6>
+        <h4 style={{ padding: '20px 0px 20px 0', margin: 0 }}>PUBLICATIONS</h4>
         <Posts posts={posts} />
       </div>
     </div>

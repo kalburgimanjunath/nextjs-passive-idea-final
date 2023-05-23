@@ -20,7 +20,11 @@ export default function Posts({ posts, count }) {
               />
             </div>
 
-            <h4>{item.title}</h4>
+            <h4
+              style={{ padding: '20px 0 0px 0', textTransform: 'capitalize' }}
+            >
+              {item.title}
+            </h4>
             <div>
               {item.description.length > 256
                 ? item.description.substring(1, 256) + '...more'
@@ -37,7 +41,7 @@ export default function Posts({ posts, count }) {
     );
   };
   return (
-    <div className="lists posts">
+    <div className="lists posts" style={{ display: 'flex' }}>
       {posts &&
         posts.map((item, index) => {
           return (

@@ -23,7 +23,7 @@
   margin: 0;
   width: 15%;
   display: flex;
-  min-width: 130px;
+  min-width: 110px;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -46,4 +46,7 @@
   text-decoration: none;
   font-size: 14x;
   color: blue;
+}
+.navbar-end ul li a i {
+  padding: 20px;
 }

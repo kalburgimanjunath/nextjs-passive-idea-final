@@ -5,18 +5,20 @@ export default function JobMenu() {
     const items = ['find jobs', 'featured', 'how it works', 'post jobs'];
     return items.map((item, index) => {
       return (
-        <React.Fragment key={index}>
+        <div className="list-item" key={index}>
           <Link href={`/${item}`}>{item}</Link>
-        </React.Fragment>
+        </div>
       );
     });
   };
   return (
     <div>
-      <>
+      <div className="lists navbar-top">
         <MenuItems />
-        <Link href="/jobs/getstarted">Get started</Link>
-      </>
+        <div className="list-item">
+          <Link href="/jobs/getstarted">Get started</Link>
+        </div>
+      </div>
       <div className="menu-banner">
         <div className="banner-text">
           <h3 style={{ position: 'absolute' }}>

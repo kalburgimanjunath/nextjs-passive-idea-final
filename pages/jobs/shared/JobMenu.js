@@ -15,7 +15,7 @@ export default function JobMenu() {
     <div>
       <>
         <MenuItems />
-        <Link href="/getstarted">Get started</Link>
+        <Link href="/jobs/getstarted">Get started</Link>
       </>
       <div className="menu-banner">
         <div className="banner-text">

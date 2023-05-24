@@ -24,7 +24,7 @@ export default function Footer() {
       {footermenu.map((item) => {
         return (
           <span>
-            <Link href="/">{item}</Link>
+            <Link href={`/${item.toLocaleLowerCase()}`}>{item}</Link>
           </span>
         );
       })}

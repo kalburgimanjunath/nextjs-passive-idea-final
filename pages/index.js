@@ -25,6 +25,7 @@ export default function Index() {
   return (
     <div>
       {/* <EarthoOneProvider clientId="F82I0MnkpHyTHggIUkPK"> */}
+
       <Home posts={posts} users={users} />
       {/* </EarthoOneProvider> */}
     </div>

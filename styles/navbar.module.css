@@ -8,6 +8,11 @@
   width: 20%;
   padding: 20px 10px;
 }
+.navbar-start a {
+  font-weight: 700;
+  color: #00c2cb;
+  font-size: 2rem;
+}
 .navbar-end {
   width: 70%;
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function Index() {
   const [CreateVideo, setCreateVideo] = useState(false);
+  const [CreateAudio, setCreateAudio] = useState(false);
   const [OpenVideoModal, setVideoModal] = useState(false);
   const [videoDetail, setVideoDetails] = useState([]);
   const OpenModal = (item) => {
@@ -188,6 +189,9 @@ export default function Index() {
         <button onClick={() => setCreateVideo(true)}>
           <i className="bi bi-plus-circle"></i> Create Video
         </button>
+        <button onClick={() => setCreateAudio(true)}>
+          <i className="bi bi-plus-circle"></i> Create Audios
+        </button>
         <div>
           <Filter />
         </div>
@@ -235,6 +239,28 @@ export default function Index() {
           <div>
             <Input type="text" name="title" label="Title" />
             <Input type="text" name="subtitle" label="Sub Title" />
+            <Input type="text" name="description" label="Description" />
+          </div>
+        </section>
+      </div>
+      <div
+        className="rightModal"
+        style={{ display: CreateAudio ? 'block' : 'none' }}
+      >
+        <header>
+          <h4>Create New Audio</h4>
+          <div className="close" onClick={() => setCreateAudio(!CreateAudio)}>
+            X
+          </div>
+        </header>
+        <section>
+          <div className="video-player">
+            <WebcamStreamCapture />
+          </div>
+          <div>
+            <Input type="text" name="title" label="Title" />
+            <Input type="text" name="subtitle" label="Sub Title" />
+            <Input type="dropdown" name="subtitle" label="Sub Title" />
             <Input type="text" name="description" label="Description" />
           </div>
         </section>

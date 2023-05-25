@@ -15,42 +15,47 @@ export default function Navbar({ session }) {
         <ul>
           <li>
             <Link href="/">
-              <i class="bi bi-house"></i>Home
+              <i className="bi bi-house"></i>Home
             </Link>
           </li>
           <li>
             <Link href="/jobs">
-              <i class="bi bi-person-workspace"></i>jobs
+              <i className="bi bi-person-workspace"></i>jobs
             </Link>
           </li>
           <li>
             <Link href="/ideas">
-              <i class="bi bi-bag-heart"></i>Popular Ideas
+              <i className="bi bi-bag-heart"></i>Popular Ideas
             </Link>
           </li>
           <li>
             <Link href="/contribute">
-              <i class="bi bi-balloon-heart"></i>Contribute your Ideas
+              <i className="bi bi-balloon-heart"></i>Contribute your Ideas
+            </Link>
+          </li>
+          <li>
+            <Link href="/videos">
+              <i className="bi bi-pencil-square"></i>Videos
             </Link>
           </li>
           <li>
             <Link href="/profile/edit-profile">
-              <i class="bi bi-pencil-square"></i>Edit Profile
+              <i className="bi bi-pencil-square"></i>Edit Profile
             </Link>
           </li>
           <li>
             <Link href="/public-profile/">
-              <i class="bi bi-person-bounding-box"></i>Profile
+              <i className="bi bi-person-bounding-box"></i>Profile
             </Link>
           </li>
           <li>
             <Link href="/bookmarks">
-              <i class="bi bi-bookmark"></i>Bookmarks
+              <i className="bi bi-bookmark"></i>Bookmarks
             </Link>
           </li>
           <li>
             <Link href="/login">
-              <i class="bi bi-person-fill-lock"></i>Login
+              <i className="bi bi-person-fill-lock"></i>Login
             </Link>
           </li>
         </ul>

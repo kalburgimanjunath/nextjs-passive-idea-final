@@ -27,7 +27,7 @@ export default function Sidebar() {
                 }}
               >
                 <span>{item}</span>
-                <i class="bi bi-arrow-right-short"></i>
+                <i className="bi bi-arrow-right-short"></i>
               </Link>
             </div>
           );

@@ -7,6 +7,8 @@ import JobListing from './job/JobListing';
 import { Input, Selectbox, Checkbox } from './formcontrols/';
 import Footerbutton from './social/footerbutton';
 import Loading from './shared/Loading';
+import Category from './videos/category';
+import WebcamStreamCapture from './videos/WebcamStreamCapture';
 export {
   Header,
   Footer,
@@ -19,4 +21,6 @@ export {
   JobListing,
   Footerbutton,
   Loading,
+  Category,
+  WebcamStreamCapture,
 };

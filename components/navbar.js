@@ -7,7 +7,7 @@ export default function Navbar({ session }) {
     <div className="navbar-top">
       <div className="navbar-start">
         <Link href="/">
-          Logo
+          My Reference
           {/* <Image src={logo} width={70} height={70} alt="logo" /> */}
         </Link>
       </div>

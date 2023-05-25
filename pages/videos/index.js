@@ -229,10 +229,10 @@ export default function Index() {
           </div>
         </header>
         <section>
-          <div className="video-thumb">
+          <div className="video-player">
             <WebcamStreamCapture />
           </div>
-          <div className="video-name">
+          <div>
             <Input type="text" name="title" label="Title" />
             <Input type="text" name="subtitle" label="Sub Title" />
             <Input type="text" name="description" label="Description" />

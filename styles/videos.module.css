@@ -34,3 +34,9 @@
 .button-icons span {
   padding: 10px;
 }
+.video-player {
+  display: flex;
+  justify-content: center;
+  background: #000;
+  flex-wrap: wrap;
+}

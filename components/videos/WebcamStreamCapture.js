@@ -52,14 +52,23 @@ const WebcamStreamCapture = () => {
   return (
     <>
       <Webcam audio={false} ref={webcamRef} />
-      {capturing ? (
-        <button onClick={handleStopCaptureClick}>Stop Capture</button>
-      ) : (
-        <button onClick={handleStartCaptureClick}>Start Capture</button>
-      )}
-      {recordedChunks.length > 0 && (
-        <button onClick={handleDownload}>Download</button>
-      )}
+      <div className="button-icons">
+        {capturing ? (
+          <button onClick={handleStopCaptureClick}>
+            <i className="bi bi-record-fill"></i>Stop Recording
+          </button>
+        ) : (
+          <button onClick={handleStartCaptureClick}>
+            <i className="bi bi-record-circle"></i>Start Recording
+          </button>
+        )}
+        {recordedChunks.length > 0 && (
+          <button onClick={handleDownload}>
+            <i className="bi bi-box-arrow-down"></i>Download
+          </button>
+        )}
+        <button>Remove Background</button>
+      </div>
     </>
   );
 };

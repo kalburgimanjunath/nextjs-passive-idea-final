@@ -9,6 +9,9 @@ export default function GetStarted() {
       <div>
         <Link href="/jobs/jobseeker">Fresher</Link>
       </div>
+      <div>
+        <Link href="/jobs/interviews">Interview Prep</Link>
+      </div>
     </div>
   );
 }
